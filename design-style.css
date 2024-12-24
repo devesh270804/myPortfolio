@@ -28,7 +28,7 @@ header{
     font-size: 1.8rem;
     font-weight: 400;
     margin-top: 4rem;
-    color: orangered;
+    color: rgb(195, 195, 195);
  }
 @keyframes fadeout {
     0%{
@@ -298,16 +298,16 @@ font-weight: 400;
     }
 
     .hosted-designs img{
-        width: 40%;
+        width: 45%;
         height: auto;
-        padding: 1rem;
+        padding: 0.5rem;
         border: 0.5px solid rgb(225, 225, 225);
         margin: 1rem;
         transition: all ease 0.5s;
     }
 
     .hosted-designs img:hover{
-        transform: scale(1.1);
+        transform: scale(1.05);
         box-shadow: 0px 2px 2px gray;
     }
 
@@ -320,3 +320,46 @@ font-weight: 400;
         padding: 0.6rem;
         background-color: #EFEFEF;
       }
+
+
+
+
+
+
+
+
+@media screen and (max-width:696px) {
+    .box{
+        flex-direction: column;
+        align-items: center;
+    }
+    .card1{
+        width: 80%;
+    }
+    .card2{
+        width: 50%;
+    }
+    .heading-title{
+        font-size: 2.8rem;
+    }
+    .heading-desc{
+        font-size: 0.925rem;
+        margin: 2rem;
+    }
+    .mobile-designs h2{
+        font-size: 2.4rem;
+    }
+    .web-designs h2{
+        font-size: 2.4rem;
+    }
+    .mobile-designs p{
+        font-size: 0.925rem;
+    }
+    .web-designs p{
+        font-size: 0.925rem;
+    }
+    hosted-designs img{
+        width: 100%;
+    }
+
+}
