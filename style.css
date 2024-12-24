@@ -388,7 +388,7 @@ overflow: hidden;
     width: 170px;
     height: 380px;
     transform-style: preserve-3d;
-    animation: animate 15s linear infinite;
+    animation: animate 20s linear infinite;
 }
 
 .box:hover {
