@@ -330,6 +330,10 @@ h1{
     text-align: center;
    }
 
+  .skill-container img{
+    height: 50%;
+   }
+
    .skill-container:hover{
     background: radial-gradient(circle, #f7f7f7, #b7b7b7);
     transform: scale(1.08);
