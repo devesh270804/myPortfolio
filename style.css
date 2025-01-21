@@ -337,7 +337,6 @@ h1{
 
    .skill-container:hover{
     background: radial-gradient(circle, #f7f7f7, #b7b7b7);
-    transform: scale(1.08);
    }
 
 
