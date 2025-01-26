@@ -305,7 +305,7 @@ h1{
    }
 
    .skill-cards{
-    width: 90%;
+    width: 100%;
     display: flex;
     gap: 2rem;
     justify-items: center;
