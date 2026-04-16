@@ -1,293 +1,737 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Devesh Chandra - Portfolio of a skilled designer and developer showcasing projects, skills, and experience in web and mobile app development.">
-    <meta name="keywords" content="Devesh Chandra, designer, developer, portfolio, web development, UI/UX design, mobile app development, Kotlin, Android Studio">
-    <meta name="author" content="Devesh Chandra">
-    <meta name="robots" content="index, follow">
-    <title>Devesh Chandra | Designer & Developer Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Devesh Chandra — Senior UI/UX Designer & Full-Stack Developer crafting refined digital experiences.">
+  <title>Devesh Chandra | Designer & Developer</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Junge&family=Jura:wght@300..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Mono:wght@300;400;500&family=Outfit:wght@100;200;300;400;500;600;700&display=swap"
+    rel="stylesheet">
 
+  <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
-    <header class="heading">
-        <div class="container">
-            <div class="logo">
-                <img loading="lazy" src="./assets/MainLogo.png" alt="SiteLogo">
-            </div>
-            <ul class="nav-list">
-                <li><a href="#about-container" >About</a></li>
-                <li><a href="#skills" >Skills</a></li>
-                <li><a href="#projects" >Projects</a></li>
-                <li><a href="resume.html" >Resume</a></li>
-                <li><a href="#contact" >Contact</a></li>
-            </ul>
-            <ul class="nav-list2">
-                <li><a href="resume.html" >Resume</a></li>
-                <li><a href="#contact" >Contact</a></li>
-            </ul>
+  <div id="cursor-dot"></div>
+  <div id="cursor-ring"></div>
+
+  <div class="bg-shape bg-shape-1"></div>
+  <div class="bg-shape bg-shape-2"></div>
+  <div class="bg-shape bg-shape-3"></div>
+
+  <div id="scroll-progress"></div>
+
+  <nav id="main-nav">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">D<span>.</span>C</a>
+      <ul class="nav-links">
+        <li><a href="#about-section">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills-section">Skills</a></li>
+        <li><a href="#projects-section">Projects</a></li>
+        <li><a href="#achievements">Achievements</a></li>
+        <li><a href="#design-work">Design</a></li>
+        <li><a href="#contact" class="nav-cta">Hire Me</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <button class="mobile-close" id="mobile-close" aria-label="Close menu">✕</button>
+    <a href="#about-section" class="mobile-link">About</a>
+    <a href="#experience" class="mobile-link">Experience</a>
+    <a href="#skills-section" class="mobile-link">Skills</a>
+    <a href="#projects-section" class="mobile-link">Projects</a>
+    <a href="#achievements" class="mobile-link">Achievements</a>
+    <a href="#contact" class="mobile-link">Contact</a>
+  </div>
+
+  <div id="hero">
+    <div class="hero-eyebrow">Available for Freelance &amp; Senior Roles</div>
+    <h1 class="hero-name">
+      Devesh<br>
+      <span class="italic">Chandra</span>
+    </h1>
+    <p class="hero-role">
+      <strong>Data Engineer &amp; Full-Stack Developer</strong> crafting
+      digital experiences that sit at the intersection of beauty and function.
+      2 years of transforming complex problems into elegant solutions.
+    </p>
+    <div class="hero-actions">
+      <a href="#projects-section" class="btn-primary">View Work →</a>
+      <a href="#contact" class="btn-ghost">Get in Touch</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat-item">
+        <span class="stat-number" data-count="2">0</span>
+        <span class="stat-label">Years Experience</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number" data-count="12">0</span>
+        <span class="stat-label">Projects Delivered</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number" data-count="4">0</span>
+        <span class="stat-label">Happy Clients</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number" data-count="4">0</span>
+        <span class="stat-label">Awards Won</span>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <div class="scroll-line"></div>
+      <span></span>
+    </div>
+  </div>
+
+  <!-- ═══ MARQUEE ═══ -->
+  <div class="marquee-wrap">
+    <div class="marquee-track">
+      <span class="marquee-item">Microsoft Azure<span class="marquee-dot"></span></span>
+      <span class="marquee-item">Web Development <span class="marquee-dot"></span></span>
+      <span class="marquee-item">Mobile Apps <span class="marquee-dot"></span></span>
+      <span class="marquee-item">Power BI <span class="marquee-dot"></span></span>
+      <span class="marquee-item">Figma <span class="marquee-dot"></span></span>
+      <span class="marquee-item">MERN Stack <span class="marquee-dot"></span></span>
+      <span class="marquee-item">Android Dev <span class="marquee-dot"></span></span>
+      <span class="marquee-item">Data Engineering <span class="marquee-dot"></span></span>
+      <span class="marquee-item">Microsoft Azure <span class="marquee-dot"></span></span>
+      <span class="marquee-item">Web Development <span class="marquee-dot"></span></span>
+      <span class="marquee-item">Mobile Apps <span class="marquee-dot"></span></span>
+      <span class="marquee-item">Power BI <span class="marquee-dot"></span></span>
+      <span class="marquee-item">Figma <span class="marquee-dot"></span></span>
+      <span class="marquee-item">MERN Stack <span class="marquee-dot"></span></span>
+      <span class="marquee-item">Android Dev <span class="marquee-dot"></span></span>
+      <span class="marquee-item">Data Engineering <span class="marquee-dot"></span></span>
+    </div>
+  </div>
+
+  <!-- ═══ ABOUT ═══ -->
+  <div id="about-section">
+    <div class="section-label reveal">About Me</div>
+    <h2 class="section-title reveal reveal-delay-1">
+      Designer who <em>codes.</em><br>Developer who <em>designs.</em>
+    </h2>
+    <div class="about-grid">
+      <div class="about-img-wrap reveal reveal-delay-2">
+        <div class="about-img-placeholder">
+          <div class="placeholder-icon">👤</div>
+          <span class="placeholder-text"><img src="assets/mainImg.jpg" alt=""></span>
         </div>
-    </header>
+        <div class="about-years-badge">
+          <span class="num">2</span>
+          <span class="lbl">Years</span>
+        </div>
+        <div class="about-img-decoration"></div>
+      </div>
+      <div class="about-content reveal reveal-delay-3">
+        <p class="about-body">
+          I am a <strong>CSE graduate from NIT Hamirpur</strong>, now two years into building products
+          that millions of people use. My work lives at the rare overlap of engineering precision
+          and design intuition — from pixel-perfect Figma systems to production-grade full-stack apps.
+        </p>
+        <p class="about-body">
+          I specialize in <strong>full‑stack development</strong> across <strong>MERN, Angular, C#, and .NET</strong>,
+          with strong expertise in
+          <strong>Microsoft Azure</strong> and <strong>Power BI</strong> for building scalable web and mobile solutions.
+          Alongside backend and frontend
+          engineering, I have experience in <strong>UI design</strong> and <strong>Android development</strong>, having
+          shipped consumer‑facing
+          applications and led design systems from concept to production. I collaborate closely with teams and startups
+          to
+          translate ideas into reliable, high‑impact products. Currently open to senior roles and select freelance
+          engagements worldwide.
+        </p>
 
-    <main>
+        <div class="about-tags">
+          <span class="tag">Microsoft Azure</span>
+          <span class="tag">Power BI</span>
+          <span class="tag">Microsoft Fabric</span>
+          <span class="tag">MERN Stack</span>
+          <span class="tag">Angular</span>
+          <span class="tag">C#</span>
+          <span class="tag">.NET</span>
+          <span class="tag">Android</span>
+          <span class="tag">Figma</span>
+          <span class="tag">Kotlin</span>
+          <span class="tag">Freelance</span>
+          <span class="tag">Open to Work</span>
+        </div>
+        <div>
+          <a href="resume.html" class="btn-primary" style="display:inline-flex;">Download Resume ↗</a>
+        </div>
+      </div>
+    </div>
+  </div>
 
-        <div class="intro">
-            <div class="image">
-                <img loading="lazy" src="./assets/myImage.jpg" alt="mainImg">
-            </div>
-            <div class="intro-right">
-                <p class="title-greet">Hello ! I am</p>
-                <h1 class="title-name">DEVESH CHANDRA</h1>
-                <h2 class="title-profession">Developer and UI/UX Designer</h2>
-                <div class="designBox">
+  <div class="section-hr"></div>
 
-                </div>
-            </div>
+  <!-- ═══ EXPERIENCE ═══ -->
+  <div id="experience">
+    <div class="section-label reveal">Career Journey</div>
+    <h2 class="section-title reveal reveal-delay-1">Work <em>Experience</em></h2>
+    <div class="exp-timeline">
+
+      <div class="exp-item reveal">
+        <div class="exp-period">Jan. 2026 — Present</div>
+        <div class="exp-role">Associate Software Engineer</div>
+        <div class="exp-company">MAQ Software, Noida</div>
+
+        <p class="exp-desc">
+          Designing backend services in C# and .NET, implementing Azure-based data orchestration,
+          storage solutions, and secure APIs to support analytics-driven web applications.
+        </p>
+
+        <div class="exp-pills">
+          <span class="pill">Power BI</span><span class="pill">Azure</span>
+          <span class="pill">C#</span><span class="pill">Angular</span>
+          <span class="pill">Microsoft Fabric</span>
+        </div>
+      </div>
+
+      <div class="exp-item reveal reveal-delay-1">
+        <div class="exp-period"> Dec. 2024 — Dec. 2025</div>
+        <div class="exp-role">UI/UX Designer &amp; Software Developer</div>
+        <div class="exp-company">The Dexter, Gurugram</div>
+
+        <p class="exp-desc">
+          Spearheaded the development of Thinkdex.academy, an EdTech platform built using MongoDB,
+          Express.js, React.js, and Node.js. Implemented Redux for scalable state management and
+          React Router for structured client-side navigation, while ensuring responsive, cross-browser
+          compatibility using modern CSS techniques. Utilized Git and GitHub for version control,
+          code reviews, and efficient collaborative development.
+        </p>
+
+        <div class="exp-pills">
+          <span class="pill">Figma</span><span class="pill">React</span>
+          <span class="pill">CSS</span><span class="pill">Node.js</span>
+          <span class="pill">MongoDB</span><span class="pill">GitHub</span>
+        </div>
+      </div>
+
+      <div class="exp-item reveal reveal-delay-2">
+        <div class="exp-period">Aug. 2024 - Oct. 2024</div>
+        <div class="exp-role">Android Developer Intern</div>
+        <div class="exp-company">Plasmid, Banglore</div>
+        <p class="exp-desc">
+          Developed a vaccination management application featuring distinct user and admin modules.
+          The user module supported registration, authentication, vaccination slot booking, and
+          certificate downloading, while the admin module enabled posting vaccination slots and
+          managing user records to ensure smooth operational control.
+        </p>
+        <div class="exp-pills">
+          <span class="pill">Kotlin</span><span class="pill">Android Studio</span>
+          <span class="pill">Firebase</span><span class="pill">XML</span>
+        </div>
+      </div>
+
+      <!-- <div class="exp-item reveal reveal-delay-3">
+        <div class="exp-period">2015 — 2018</div>
+        <div class="exp-role">Junior Web Designer</div>
+        <div class="exp-company">PixelCraft Agency — Muzaffarpur, India</div>
+        <p class="exp-desc">
+          Designed and developed marketing websites for 20+ SME clients.
+          First exposure to user research and rapid prototyping, setting the
+          foundation for a design-led development approach.
+        </p>
+        <div class="exp-pills">
+          <span class="pill">HTML/CSS</span><span class="pill">JavaScript</span>
+          <span class="pill">Photoshop</span><span class="pill">WordPress</span>
+        </div>
+      </div> -->
+
+    </div>
+  </div>
+
+  <div class="section-hr"></div>
+
+  <!-- ═══ SKILLS ═══ -->
+ <div id="skills-section">
+  <div class="section-label reveal">Capabilities</div>
+  <h2 class="section-title reveal reveal-delay-1">
+    Skills & <em>Expertise</em>
+  </h2>
+
+  <div class="skills-grid">
+
+    <!-- Cloud, Data & Platforms -->
+    <div class="skill-group reveal reveal-delay-1">
+      <div class="skill-group-title">Cloud & Data Platforms</div>
+      <div class="skill-list">
+
+        <div class="skill-row">
+          <div class="skill-name">Azure <span>88%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
         </div>
 
-
-        <div id="about-container">
-            <div id="about">
-    
-                <div class="HeadlinesTopic">
-                    <span class="span1"><a  href="#headlineOne">About Me</a></span>
-                    <span class="span2"><a href="#headlineTwo">Why Me</a></span>
-                </div>
-                <div class="Headlines">
-                    <p id="headlineOne">
-                        I am a CSE undergraduate from NIT Hamirpur, passionate and skilled 
-                        software developer with expertise in MERN Stack Development, Android development and UI/UX design.
-                        With a solid background in software engineering 
-                        and a strong foundation in programming languages, I am committed to delivering 
-                        high-quality work. I am specialized in web development, mobile app development, web design, and 
-                        creating user-centric experiences. I am now open to working as a freelancer and 
-                        offering my services to clients around the world.
-                    </p>
-                    <div id="headlineTwo">
-                        <ul>
-                            <li>Clear Communication</li>
-                            <li>Attention to Details</li>
-                            <li>Client Centric</li>
-                        </ul>
-                        <ul>
-                            <li>Technical Expertise</li>
-                            <li>Timely Delivery</li>
-                            <li>Adaptability and Versatility</li>
-                        </ul>
-                        <ul>
-                            <li>Problem-solving Skills</li>
-                            <li>Continuous Learning</li>
-                            <li>Freelancing Availability</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-
-        <div id="skills">
-            <div class="skills">
-                <h2>SKILLS</h2>
-            <div class="skill-cards">
-                <div class="skill-container">
-                    <img src="./assets/react.svg" alt="ReactJS">
-                    <span>ReactJS</span>
-                </div>
-                <div class="skill-container">
-                    <img src="./assets/nodejs.png" alt="NodeJS">
-                    <span>NodeJS</span>
-                </div>
-                <div class="skill-container">
-                    <img src="./assets/expressjs.png" alt="ExpressJS">
-                    <span>ExpressJS</span>
-                </div>
-                <div class="skill-container">
-                    <img src="./assets/Html.svg" alt="Html">
-                    <span>HTML</span>
-                </div>
-                <div class="skill-container">
-                    <img src="./assets/css.svg" alt="css">
-                    <span>CSS</span>
-                </div>
-                <div class="skill-container">
-                    <img src="./assets/javascript.svg" alt="js">
-                    <span>javascript</span>
-                </div>
-                <div class="skill-container">
-                    <img src="./assets/mongoDB.svg" alt="mongoDB">
-                    <span>MongoDB</span>
-                </div>
-                <div class="skill-container">
-                    <img src="./assets/mySQL.svg" alt="mySQL">
-                    <span>MySQL</span>
-                </div>
-                <div class="skill-container">
-                    <img src="./assets/github.png" alt="GitHub">
-                    <span>GitHub</span>
-                </div>
-                <div class="skill-container">
-                    <img src="./assets/firebase.svg" alt="firebase">
-                    <span>Firebase</span>
-                </div>
-                
-                <div class="skill-container">
-                    <img src="./assets/cpp.svg" alt="C++">
-                    <span>C++</span>
-                </div>
-                
-                <div class="skill-container">
-                    <img src="./assets/kotlin.svg" alt="kotlin">
-                    <span>Kotlin</span>
-                </div>
-                
-                <div class="skill-container">
-                    <img src="./assets/xml.svg" alt="xm;">
-                    <span>XML</span>
-                </div>
-                <div class="skill-container">
-                    <img src="./assets/AndroidStudio.svg" alt="Android">
-                    <span>AndroidStudio</span>
-                </div>
-                
-                <div class="skill-container">
-                    <img src="./assets/figma.svg" alt="figma">
-                    <span>Figma</span>
-                </div>
-            </div>
-            </div>
+        <div class="skill-row">
+          <div class="skill-name">Microsoft Fabric <span>82%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="82"></div></div>
         </div>
 
-        <div id="projects">
-            <div class="projects">
-                <h2>PROJECTS</h2>
-
-            <div class="project-container">
-                <div class="left-project-container">
-                    <div class="box">
-                        <span style="--i:1"><img loading="lazy" src="./assets/at1.jpg" alt="image"></span>
-                        <span style="--i:2"><img loading="lazy" src="./assets/at2.jpg" alt="image"></span>
-                        <span style="--i:3"><img loading="lazy" src="./assets/at3.jpg" alt="image"></span>
-                    </div>    
-                </div>
-                <div class="right-project-container">
-                    <h3>AttendanceTrack</h3>
-                    <a href="#github">GitHub :   devesh270804/AttendanceTrack</a>
-                    <div class="project-desc">
-                        <h4>Description : </h4>
-                        <div class="desc">
-                            <p>Android application using Android Studio. </p>
-                            <p>Authenticates users with Firebase and stores their attendance in a database. </p>
-                            <p>Provides in-app notifications for marking attendance with features for extra attendance. </p>
-                            <p>Remarks for less than the required attendance percentage . </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-container">
-                <div class="right-project-container">
-                    <h3>StayFit</h3>
-                    <a href="#github">GitHub :   devesh270804/StayFit</a>
-                    <div class="project-desc">
-                        <h4>Description : </h4>
-                        <div class="desc">
-                            <p>Application for tracking Fitness, Weight and Calories. </p>
-                            <p>More focused on clean UI Design and MVVM architecture. </p>
-                            <p>Has the variety of workouts based on difficulty level. </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="left-project-container" id="lpc2">
-                    <div class="box">
-                        <span style="--i:1"><img loading="lazy" src="./assets/fit1.jpg" alt="image"></span>
-                        <span style="--i:2"><img loading="lazy" src="./assets/fit2.jpg" alt="image"></span>
-                        <span style="--i:3"><img loading="lazy" src="./assets/fit3.jpg" alt="image"></span>
-                    </div>    
-                </div>
-                
-            </div>
-
-            <div class="project-container">
-                <div class="left-project-container" id="lpc3">
-                    <div class="box">
-                        <span style="--i:1"><img loading="lazy" src="./assets/nt1.jpg" alt="image"></span>
-                        <span style="--i:2"><img loading="lazy" src="./assets/nt2.jpg" alt="image"></span>
-                        <span style="--i:3"><img loading="lazy" src="./assets/nt3.jpg" alt="image"></span>
-                    </div>    
-                </div>
-                <div class="right-project-container">
-                    <h3>NotesApp</h3>
-                    <a href="#github">GitHub :   devesh270804/NotesApp</a>
-                    <div class="project-desc">
-                        <h4>Description : </h4>
-                        <div class="desc">
-                            <p>Android application using Android Studio.</p>
-                            <p>Clean design using minimal design pattern. </p>
-                            <p>Stores the notes using Room Database with functionality of deletion and editing.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            </div>
+        <div class="skill-row">
+          <div class="skill-name">Power BI <span>90%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
         </div>
 
-        <div class="design-projects">
-            <div class="design-imgs">
-                <img loading="lazy" src="./assets/Screenshot 2024-12-23 034329.png" alt="">
-                <img loading="lazy" src="./assets/Screenshot 2024-12-23 034455.png" alt="">
-                <img loading="lazy" src="./assets/Screenshot 2024-12-23 034351.png" alt="">
-                <img loading="lazy" src="./assets/Screenshot 2024-12-23 034530.png" alt="">
-            </div>
-            <div class="checkout-button">
-                <p>Please do checkout my web, app and card designs...</p>
-                <div class="img-button">
-                    <a href="designs.html">CheckOut</a>
-                    <img loading="lazy" src="./assets/arrow_right_alt_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg" alt="">
-                </div>
-            </div>
+        <div class="skill-row">
+          <div class="skill-name">SSMS / SQL Server <span>85%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
         </div>
 
+      </div>
+    </div>
 
-    </main>
+    <!-- Frontend Development -->
+    <div class="skill-group reveal reveal-delay-2">
+      <div class="skill-group-title">Frontend Development</div>
+      <div class="skill-list">
 
-    <footer id="contact">
-        <div class="contact-section">
-            <span id="touch">Get in Touch</span>
-            <div class="contact-container">
-                <div class="contact-container-inner">
-                    <div class="contact-container-left">
-                        <span>+91 7254837574</span>
-                        <span>22bcs036@nith.ac.in</span>
-                        <span>Muzaffarpur, Bihar  India 843109</span>
-                        <div class="contact-img-container">
-                            <a href="https://github.com/devesh270804" target="_blank"><img loading="lazy" src="./assets/Vector (1).svg" alt=""></a>
-                            <a href="https://www.linkedin.com/in/devesh-chandra-268532283/" target="_blank"><img loading="lazy" src="./assets/Vector (2).svg" alt=""></a>
-                            <a href="https://wa.me/7254837574" target="_blank"><img loading="lazy" src="./assets/Vector (3).svg" alt=""></a>
-                        </div>
-                    </div>
-                    <div class="contact-container-right">
-                        <p>Send mail to <span>22bcs036@nith.ac.in</span></p>
-                        
-                        <button onclick="window.location.href='mailto:22bcs036@nith.ac.in'">Send Email</button>
-
-                    </div>
-                </div>
-            </div>
+        <div class="skill-row">
+          <div class="skill-name">Angular <span>88%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
         </div>
-    </footer>
 
-    <section class="copy-right">
-        <span>All rights reserved</span>
-    </section>
-<script src="index.js">
-</script>
+        <div class="skill-row">
+          <div class="skill-name">TypeScript <span>90%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+        </div>
+
+        <div class="skill-row">
+          <div class="skill-name">React (MERN) <span>87%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="87"></div></div>
+        </div>
+
+        <div class="skill-row">
+          <div class="skill-name">Responsive Web Design <span>95%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="95"></div></div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Backend & Mobile -->
+    <div class="skill-group reveal reveal-delay-3">
+      <div class="skill-group-title">Backend & Mobile</div>
+      <div class="skill-list">
+
+        <div class="skill-row">
+          <div class="skill-name">C# / .NET <span>88%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
+        </div>
+
+        <div class="skill-row">
+          <div class="skill-name">Node.js / Express (MERN) <span>85%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+        </div>
+
+        <div class="skill-row">
+          <div class="skill-name">MongoDB <span>82%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="82"></div></div>
+        </div>
+
+        <div class="skill-row">
+          <div class="skill-name">Android (Kotlin) <span>90%</span></div>
+          <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+  <div class="section-hr"></div>
+
+  <!-- ═══ PROJECTS ═══ -->
+  <div id="projects-section">
+    <div class="section-label reveal">Featured Work</div>
+    <h2 class="section-title reveal reveal-delay-1">Selected <em>Projects</em></h2>
+    <div class="projects-grid">
+
+      <div class="project-card featured reveal">
+        <div class="project-card-inner">
+          <div class="project-thumb">
+            <div class="project-thumb-inner"
+              style="background-image: url('assets/Untitled design.png'); background-size: cover; background-position: center;">
+              <img src="assets/Untitled design.png" alt="">
+              <div class="thumb-label">AttendanceTrack — Android App</div>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-type">Android · Firebase · Kotlin</div>
+            <div class="project-name">AttendanceTrack</div>
+            <p class="project-desc-text">
+              A full-featured Android attendance management app. Firebase auth, real-time database,
+              in-app notifications, and intelligent attendance percentage tracking with remarks for
+              shortfall. Clean Material You design language.
+            </p>
+            <div class="project-links">
+              <a href="https://github.com/devesh270804/AttendanceTrack" target="_blank" class="project-link">GitHub
+                ↗</a>
+              <div class="exp-pills" style="margin:0;"><span class="pill">Kotlin</span><span
+                  class="pill">Firebase</span><span class="pill">Android Studio</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card reveal reveal-delay-1">
+        <div class="project-card-inner">
+          <div class="project-thumb">
+            <div class="project-thumb-inner" style="background: linear-gradient(135deg, #f5ede8, #efd8c8);">
+              <img src="assets/Untitled design1.png" alt="">
+              <div class="thumb-label">StayFit — Fitness Tracker</div>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-type">Android · MVVM · Kotlin</div>
+            <div class="project-name">StayFit</div>
+            <p class="project-desc-text">
+              Fitness, weight and calorie tracking app built with strict MVVM architecture.
+              Curated workout library categorised by difficulty, with polished UI reflecting
+              a premium health brand.
+            </p>
+            <div class="project-links">
+              <a href="https://github.com/devesh270804/StayFit" target="_blank" class="project-link">GitHub ↗</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card reveal reveal-delay-2">
+        <div class="project-card-inner">
+          <div class="project-thumb">
+            <div class="project-thumb-inner" style="background: linear-gradient(135deg, #e8eef5, #ccd8eb);">
+              <img src="assets/Untitled design2.png" alt="">
+              <div class="thumb-label">NotesApp — Room DB</div>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-type">Android · Room Database · Kotlin</div>
+            <div class="project-name">NotesApp</div>
+            <p class="project-desc-text">
+              Minimal notes application following the clean architecture pattern.
+              Room Database persistence, full CRUD operations, and a refined
+              monochrome design that keeps content front and centre.
+            </p>
+            <div class="project-links">
+              <a href="https://github.com/devesh270804/NotesApp" target="_blank" class="project-link">GitHub ↗</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card reveal reveal-delay-3">
+        <div class="project-card-inner">
+          <div class="project-thumb">
+            <div class="project-thumb-inner" style="background: linear-gradient(135deg, #e8e8e8, #c3c3c3);">
+              <img src="assets/textures.png" alt="">
+              <div class="thumb-label">Texture.com — Web Design</div>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-type">Web Design · Figma · HTML/CSS</div>
+            <div class="project-name">Texture.com</div>
+            <p class="project-desc-text">
+              Full e-commerce website design for a premium texture and material marketplace.
+              Designed in Figma, implemented in HTML/CSS with rich hover interactions
+              and a refined editorial aesthetic.
+            </p>
+            <div class="project-links">
+              <a href="textures.html" class="project-link">Live Preview ↗</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="section-hr"></div>
+
+  <!-- ═══ ACHIEVEMENTS ═══ -->
+  <div id="achievements">
+  <div class="section-label reveal">Recognition</div>
+  <h2 class="section-title reveal reveal-delay-1">Awards & <em>Achievements</em></h2>
+  <div class="achievements-grid">
+
+    <div class="achievement-card reveal reveal-delay-1">
+      <div class="achievement-icon">🏆</div>
+      <div class="achievement-title">Best Core Club Award</div>
+      <p class="achievement-desc">Led Core Club as Secretary at NIT Hamirpur, driving innovative design projects that secured the <strong>Best Core Club Award</strong> at Tech Fest Nimbus 2026.</p>
+      <div class="achievement-year">2026</div>
+    </div>
+
+    <div class="achievement-card reveal reveal-delay-2">
+      <div class="achievement-icon">📜</div>
+      <div class="achievement-title">Angular Developer</div>
+      <p class="achievement-desc">Certified Angular Developer from MAQ Software after completing intensive training and delivering production-ready projects with modern Angular architecture.</p>
+      <div class="achievement-year">2026</div>
+    </div>
+
+    <div class="achievement-card reveal reveal-delay-2">
+      <div class="achievement-icon">📊</div>
+      <div class="achievement-title">Power BI Specialist</div>
+      <p class="achievement-desc">Certified Power BI expert from MAQ Software, building advanced analytics dashboards using Microsoft Fabric, Power BI Desktop, and complex data modeling.</p>
+      <div class="achievement-year">2026</div>
+    </div>
+
+    <div class="achievement-card reveal reveal-delay-2">
+      <div class="achievement-icon">☁️</div>
+      <div class="achievement-title">Microsoft Azure Data Engineer</div>
+      <p class="achievement-desc">Certified Azure Data Engineer from MAQ Software, architecting end-to-end data pipelines with Data Bricks, Azure Synapse, Data Factory, and ADLS Gen2.</p>
+      <div class="achievement-year">2026</div>
+    </div>
+
+    <div class="achievement-card reveal reveal-delay-3">
+      <div class="achievement-icon">📱</div>
+      <div class="achievement-title">Android Developer</div>
+      <p class="achievement-desc">Certified Android Developer from Plasmid Technologies, building native mobile applications with modern Android development practices and architecture.</p>
+      <div class="achievement-year">2024</div>
+    </div>
+
+  </div>
+</div>
+  <div class="section-hr"></div>
+
+  <!-- ═══ TESTIMONIALS ═══ -->
+  <div id="testimonials">
+    <div class="testimonials-inner">
+      <div class="section-label reveal">Social Proof</div>
+      <h2 class="section-title reveal reveal-delay-1">What Clients <em>Say</em></h2>
+
+      <div class="testimonials-track-wrap">
+        <div class="testimonials-track" id="t-track">
+
+          <div class="testimonial-card">
+            <div class="testimonial-quote">"</div>
+            <p class="testimonial-text">
+              Devesh delivered a clean and reliable Power BI solution that combined Power BI Desktop and Report Builder
+              seamlessly. The reports were well-structured, visually polished, and ready for both analysis and
+              presentation.
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar">📊</div>
+              <div>
+                <div class="author-name">Abhishek Kumar</div>
+                <div class="author-role">Power BI Team</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-quote">"</div>
+            <p class="testimonial-text">
+              He designed and implemented a robust three-tier medallion architecture on Azure using ADF, ADB, SSMS, and
+              ADLS. The pipeline was organized, scalable, and built with strong data quality and transformation flow
+              across layers.
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar">☁️</div>
+              <div>
+                <div class="author-name">Nandkumar Sanodiya</div>
+                <div class="author-role">Senior Software Engineer 2</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-quote">"</div>
+            <p class="testimonial-text">
+              Working with Devesh on our MERN stack project at Dexter was smooth from start to finish. He wrote clean
+              code, handled frontend and backend integration confidently, and delivered features that matched the
+              product vision.
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar">💻</div>
+              <div>
+                <div class="author-name">Aarav</div>
+                <div class="author-role">Manager, The Dexter</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-quote">"</div>
+            <p class="testimonial-text">
+              Devesh quickly understood our client requirements and implemented a valuable feature in C# and .NET with
+              great attention to detail. The delivery was stable, efficient, and integrated smoothly into our existing
+              system.
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar">🛠️</div>
+              <div>
+                <div class="author-name">---</div>
+                <div class="author-role">Associate TPM</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="testimonials-nav">
+        <button class="t-nav-btn" id="t-prev">←</button>
+        <button class="t-nav-btn" id="t-next">→</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ DESIGN SHOWCASE ═══ -->
+  <div id="design-work">
+    <div class="section-label reveal">Visual Work</div>
+    <h2 class="section-title reveal reveal-delay-1">Design <em>Showcase</em></h2>
+    <p style="color:var(--text2); margin-top:0.8rem; font-size:0.95rem; max-width:500px; line-height:1.7;"
+      class="reveal reveal-delay-2">
+      Hover to expand each piece. From mobile UI to magazine layouts — an year of visual craft.
+    </p>
+    <div class="design-strip reveal reveal-delay-3">
+      <div class="design-thumb" style="background: linear-gradient(160deg, #d8d8f0, #c4c4e8);">
+        <div class="design-thumb-icon"></div>
+        <img src="design-elements/mobileUI1.svg" alt="">
+        <div class="design-thumb-label">Mobile UI — Fitness App</div>
+      </div>
+      <div class="design-thumb" style="background: linear-gradient(160deg, #f0e8d8, #e8d4b8);">
+        <div class="design-thumb-icon"></div>
+        <img src="design-elements/ceditcard1.svg" alt="">
+        <div class="design-thumb-label">Credit Card Design</div>
+      </div>
+      <div class="design-thumb" style="background: linear-gradient(160deg, #d8f0d8, #bce8bc);">
+        <div class="design-thumb-icon"></div>
+        <img src="design-elements/magazine1.svg" alt="">
+        <div class="design-thumb-label">Magazine Cover</div>
+      </div>
+      <div class="design-thumb" style="background: linear-gradient(160deg, #f0d8e8, #e8bccc);">
+        <div class="design-thumb-icon"></div>
+        <img src="design-elements/card.svg" alt="">
+        <div class="design-thumb-label">Web App — Gallery</div>
+      </div>
+      <div class="design-thumb" style="background: linear-gradient(160deg, #d8e8f0, #bcd0e8);">
+        <div class="design-thumb-icon"></div>
+        <img src="design-elements/mobileUI2.svg" alt="">
+        <div class="design-thumb-label">Brand Cards</div>
+      </div>
+    </div>
+    <div style="margin-top:2rem; text-align:center;" class="reveal">
+      <a href="designs.html" class="btn-primary" style="display:inline-flex;">Explore Full Design Portfolio ↗</a>
+    </div>
+  </div>
+
+  <div class="section-hr"></div>
+
+  <!-- ═══ EXTRAS ═══ -->
+  <div id="extras">
+    <div class="section-label reveal">Beyond Work</div>
+    <h2 class="section-title reveal reveal-delay-1">Activities &amp; <em>Interests</em></h2>
+    <div class="extras-columns">
+
+      <div class="reveal reveal-delay-1">
+        <div class="extras-block-title">Hobbies &amp; Passions</div>
+        <div class="hobby-item">
+          <div class="hobby-icon">🎨</div>
+          <div class="hobby-text">
+            <h4>Illustration &amp; Sketching</h4>
+            <p>Character design and architectural sketching — the analogue counterpart to my digital craft.</p>
+          </div>
+        </div>
+        <div class="hobby-item">
+          <div class="hobby-icon">📷</div>
+          <div class="hobby-text">
+            <h4>Photography</h4>
+            <p>Street and architectural photography. Finding the hidden design in everyday spaces.</p>
+          </div>
+        </div>
+        <div class="hobby-item">
+          <div class="hobby-icon">🪴</div>
+          <div class="hobby-text">
+            <h4>Gardening</h4>
+            <p>Gardener with a special interest in bonsai and uncommon plants.</p>
+          </div>
+        </div>
+        <div class="hobby-item">
+          <div class="hobby-icon">🎵</div>
+          <div class="hobby-text">
+            <h4>Music &amp; Ambient Soundscapes</h4>
+            <p>Music enthusiast. Sound deeply influences visual creativity.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="reveal reveal-delay-2">
+        <div class="extras-block-title">Extracurricular Activities</div>
+        <div class="ec-item">
+          <div class="ec-name">Technical Fest — Club Secretary, NIT Hamirpur</div>
+          <div class="ec-detail">Nimbus 2026 · Branding, Team Management &amp; Print Design</div>
+        </div>
+        <div class="ec-item">
+          <div class="ec-name">Design and Deco — Club Coordinator, NIT Hamirpur</div>
+          <div class="ec-detail">Nimbus 2025 · Team Leading, Project Planning &amp; Execution</div>
+        </div>
+        <div class="ec-item">
+          <div class="ec-name">Swatch Bharat Abhiyan — Volunteer</div>
+          <div class="ec-detail">College Cleanliness Drive &amp; Wallpainting · 2023 - 2025</div>
+        </div>
+        <div class="ec-item">
+          <div class="ec-name">Cricket &amp; Badminton</div>
+          <div class="ec-detail">College Teams · Strategy-driven sports </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="section-hr"></div>
+
+  <!-- ═══ CONTACT ═══ -->
+  <div id="contact">
+    <div class="section-label reveal" style="justify-content:center;">Let's Collaborate</div>
+    <div class="contact-super reveal reveal-delay-1">
+      Have a project<br>in <em>mind?</em>
+    </div>
+    <p class="contact-sub reveal reveal-delay-2">
+      Whether it's a PowerBI project, data engineering task, a full-stack build, or a branding challenge —
+      I'm always open to interesting conversations.
+    </p>
+    <div class="reveal reveal-delay-3">
+      <a href="mailto:22bcs036@nith.ac.in" class="btn-primary"
+        style="display:inline-flex; font-size:1rem; padding:1rem 2.5rem;">
+        Send an Email ↗
+      </a>
+    </div>
+    <div class="contact-links reveal reveal-delay-4">
+      <a href="https://github.com/devesh270804" target="_blank" class="contact-link-item">⌥ GitHub</a>
+      <a href="https://www.linkedin.com/in/devesh-chandra-268532283/" target="_blank" class="contact-link-item">in
+        LinkedIn</a>
+      <a href="https://wa.me/7254837574" target="_blank" class="contact-link-item">✉ WhatsApp</a>
+      <a href="mailto:22bcs036@nith.ac.in" class="contact-link-item">@ Email</a>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logo">Devesh Chandra</div>
+      <div class="footer-copy">© 2024 · All rights reserved</div>
+      <div class="footer-socials">
+        <a href="https://github.com/devesh270804" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/devesh-chandra-268532283/" target="_blank">LinkedIn</a>
+        <a href="designs.html">Designs</a>
+        <a href="resume.html">Resume</a>
+      </div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
 </body>
+
 </html>
